@@ -64,7 +64,7 @@ spec:
         persistentVolumeClaim:
           claimName: "{{ .Chart.Name }}-data"
       {{- if .Values.extraVolumes }}
-      {{ toYaml .Values.extraVolumes | indent 6 }}
+      {{ toYaml .Values.extraVolumes | nindent 6 }}
       {{- end }}
 
       {{- if .Values.nodeSelector }}
